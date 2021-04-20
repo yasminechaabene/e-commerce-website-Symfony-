@@ -1,6 +1,6 @@
 # e-commerce-website-Symfony-
 
-#Front-office
+# Front-office
 
  *User / admin login
  
@@ -22,7 +22,7 @@
  
  *Convert a basket into an order if the submission of the credit card form is valid
  
-Back-office
+# Back-office
 
  *Orders list page
  
