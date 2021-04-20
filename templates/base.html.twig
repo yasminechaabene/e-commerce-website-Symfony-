@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>E-commerce - {% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+        {% include 'partials/stylesheet.html.twig' %}
+    </head>
+    <body class="animsition">
+        {% include 'partials/header.html.twig' %}
+        {% if app.session.flashBag.has('success') %}
+            <div class="alert alert-success">
+                {% for msg in app.session.flashBag.get('success') %}
+                    {{ msg }}
+                {% endfor %}
+            </div>
+        {% endif %}
+        {% block body %}
+
+        {% endblock %}
+        {% include 'partials/footer.html.twig' %}
+        {% block javascripts %}
+            <script type="text/javascript">
+
+
+            </script>
+        {% endblock %}
+    </body>
+</html>

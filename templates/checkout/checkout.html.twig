@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello CartController!{% endblock %}
+
+
+
+{% block body %}
+    {{ form_start(addresselect) }}
+    {{ form_widget(addresselect) }}
+
+    <button>Validate address</button>
+
+    {{ form_end(addresselect) }}
+
+
+
+
+    <!-- How to display 2 same form (ex: billing/delivery) -->
+    <a href="{{ path('new_address') }}">Add a new address</a>
+
+
+{% endblock %}

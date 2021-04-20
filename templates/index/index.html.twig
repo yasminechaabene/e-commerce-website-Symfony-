@@ -1,0 +1,90 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Home{% endblock %}
+
+{% block body %}
+
+    <!-- Slide1 -->
+    <section class="slide1">
+        <div class="wrap-slick1">
+            <div class="slick1">
+                {% for collection in collections %}
+                    {% include 'index/partials/slide.html.twig' %}
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <!-- New Product -->
+    <section class="newproduct bgwhite p-t-45 p-b-105">
+        <div class="container">
+            <div class="sec-title p-b-60">
+                <h3 class="m-text5 t-center">
+                    Featured Products
+                </h3>
+            </div>
+
+            <!-- Slide2 -->
+            <div class="wrap-slick2">
+                <div class="slick2">
+
+                    {% for product in products %}
+                        {% include 'index/partials/product.html.twig' %}
+                    {% endfor %}
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Banner2 -->
+    <section class="banner2 bg5 p-t-55 p-b-55">
+        <div class="container">
+            <div class="row">
+                {% for collection in collections %}
+                    {% include 'index/partials/collection.html.twig' %}
+                {% endfor %}
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Shipping -->
+    <section class="shipping bgwhite p-t-62 p-b-46">
+        <div class="flex-w p-l-15 p-r-15">
+            <div class="flex-col-c w-size5 p-l-15 p-r-15 p-t-16 p-b-15 respon1">
+                <h4 class="m-text12 t-center">
+                    Free Delivery Worldwide
+                </h4>
+
+                <a href="#" class="s-text11 t-center">
+                    Click here for more info
+                </a>
+            </div>
+
+            <div class="flex-col-c w-size5 p-l-15 p-r-15 p-t-16 p-b-15 bo2 respon2">
+                <h4 class="m-text12 t-center">
+                    30 Days Return
+                </h4>
+
+                <span class="s-text11 t-center">
+                Simply return it within 30 days for an exchange.
+            </span>
+            </div>
+
+            <div class="flex-col-c w-size5 p-l-15 p-r-15 p-t-16 p-b-15 respon1">
+                <h4 class="m-text12 t-center">
+                    Store Opening
+                </h4>
+
+                <span class="s-text11 t-center">
+                Shop open from Monday to Sunday
+            </span>
+            </div>
+        </div>
+    </section>
+
+{% endblock body %}
+
+
